@@ -1,0 +1,310 @@
+Changes compared to default V1.31.1
+TC_FRAME
+TC_OSKEY
+TC_SYNC
+TC_RANDOM
+TC_UNITPOOL
+TC_ITEMPOOL
+
+variable replace
+heroskillcode -> abilcode 
+(heroskillcode is mostly useless, replacing it with abilcode makes many things easier)
+
+can create globals of Types
+herostat
+racepreference
+widget
+boolexpr
+unitorderutarg
+unitorderptarg
+unitorderdtarg
+unitorderitarg
+unitordernotarg
+abilityintegerlevelfield
+abilityreallevelfield
+modelfile
+imagefile
+region (Map cell group)
+
+New PreSets:
+TriggerNull
+TriggerBlizzardStockPurchased
+TriggerBlizzardSkipCinematicScene
+
+RacePreferenceHuman
+RacePreferenceOrc
+RacePreferenceUndead
+RacePreferenceNightelf
+RacePreferenceDemon
+RacePreferenceRandom
+
+RaceNage
+RaceCommoner
+RaceCreep
+RaceCritters
+RaceOther
+RaceUnknown
+
+OrderStun
+OrderUseSlot1
+OrderUseSlot2
+OrderUseSlot3
+OrderUseSlot4
+OrderUseSlot5
+OrderUseSlot6
+
+TimerNull
+TimerBlizzardAddStockItems
+
+Most OSKEYs
+
+TextTagNull
+
+PlayerEventSyncData
+PlayerEventAnyKeyDown
+PlayerEventAnyKeyUp
+
+PlayerUnitEventDamaged
+PlayerUnitEventDamaging
+PlayerUnitEventSelected
+PlayerUnitEventDeSelected
+
+UnitEventDamaging
+UnitEventSummon
+
+UnitTypeDead
+UnitTypeGiant
+UnitTypeTaure
+
+WeaponTypeNull
+
+Hero Skills
+heroskillcode -> abilcode
+
+LocationNull
+
+PlayerFlagOBSERVER
+PlayerFlagOBSERVER_ON_DEATH
+
+Event Functions
+TriggerRegisterItemDeathEvent
+BlzTriggerRegisterFrameEvent
+BlzTriggerRegisterPlayerKeyEvent
+BlzTriggerRegisterPlayerSyncEvent
+
+Condtions:
+OperatorCompareOskeyType
+OperatorComparePoint
+OperatorCompareTimer
+OperatorCompareAttackType
+OperatorCompareDamageType
+OperatorCompareWeaponType
+OperatorCompareFrameHandle
+
+Actions:
+UnitDamageTarget
+SetUnitAnimationByIndex
+CreateTimerBJ
+DialogAddButtonWithHotkeyBJ
+BJDebugMsg
+NudgeObjectsInRect
+RemoveSavedInteger
+RemoveSavedReal
+RemoveSavedBoolean
+RemoveSavedString
+RemoveSavedHandle
+StartSoundForPlayerBJ
+PostTriggerExecuteBJ
+
+SetUnitX
+SetUnitY
+RemoveLocation
+RemoveRect
+MoveLocation
+DestroyGroup
+DestroyForce
+ResetTrigger
+UnitPoolAddUnitType
+UnitPoolRemoveUnitType
+ItemPoolAddItemType
+ItemPoolRemoveItemType
+DestroyTimer
+BlzSetEventDamageType
+BlzSetEventAttackType
+BlzSetEventWeaponType
+UnitMakeAbilityPermanentBJ
+IssueNeutralImmediateOrder
+IssueNeutralImmediateOrderById
+BuyUnitForPlayer
+BuyItemForPlayer
+IssueNeutralTargetOrder
+IssueNeutralTargetOrderById
+
+BlzEnableUIAutoPosition
+BlzHideOriginFrames
+BlzLoadTOCFile
+BlzCreateFrame
+BlzCreateSimpleFrame
+BlzCreateFrameByType
+BlzDestroyFrame
+BlzFrameSetPoint
+BlzFrameSetAbsPoint
+BlzFrameClearAllPoints
+BlzFrameSetAllPoints
+BlzFrameSetVisible
+BlzFrameClick
+BlzFrameSetText
+BlzFrameAddText
+BlzFrameSetTextSizeLimit
+BlzFrameSetTextColor
+BlzFrameSetFocus
+BlzFrameSetModel
+BlzFrameSetEnable
+BlzFrameSetAlpha
+BlzFrameSetSpriteAnimate
+BlzFrameSetTexture
+BlzFrameSetScale
+BlzFrameSetTooltip
+BlzFrameCageMouse
+BlzFrameSetValue
+BlzFrameSetMinMaxValue
+BlzFrameSetStepSize
+BlzFrameSetSize
+BlzFrameSetVertexColor
+BlzFrameSetLevel
+BlzFrameSetParent
+BlzFrameSetFont
+BlzFrameSetTextAlignment
+
+BlzPauseUnitEx
+BlzDisplayChatMessage
+BlzEnableCursor
+BlzChangeMinimapTerrainTex
+SetPlayerTeam
+MoveLightningEx
+
+RandomDistReset
+RandomDistAddItem
+RemoveRegion
+BlzSendSyncData
+
+Fixed
+BlzSetAbilityIntegerFieldBJ
+
+(string -> StringExt)
+BlzSetAbilityResearchExtendedTooltip
+BlzSetAbilityExtendedTooltip 
+BlzSetAbilityActivatedExtendedTooltip
+BlzSetItemDescription
+BlzSetItemExtendedTooltip
+
+
+Removed SaveTrackableHandleBJ SaveGameCacheHandleBJ
+
+Actions - Getter:
+
+Removed LoadTrackableHandleBJ
+Fixed BlzSetAbilityIntegerField, BlzGetAbilityStringLevelField
+
+GetInventoryIndexOfItemTypeBJ
+PlayersAreCoAllied
+IntegerTertiaryOp
+PercentToInt
+PercentTo255
+GetPlayerTypedUnitCount
+
+BlzGetEventDamageType
+BlzGetEventAttackType
+BlzGetEventWeaponType
+GetSpellAbility
+GetUnitX
+GetUnitY
+IsUnitInRange
+IsUnitInRangeLoc
+IsUnitInRangeXY
+IsUnitOwnedByPlayer
+CreateTimer
+CreateGroup
+PlaceRandomUnit
+PlaceRandomItem
+BlzGetOriginFrame
+BlzConvertColor
+BlzFrameIsVisible
+BlzGetFrameByName
+BlzFrameGetName
+BlzFrameGetText
+BlzFrameGetTextSizeLimit
+BlzFrameGetEnable
+BlzFrameGetAlpha
+BlzFrameGetValue
+BlzFrameGetParent
+BlzFrameGetHeight
+BlzFrameGetWidth
+BlzGetTriggerFrame
+BlzGetTriggerFrameEvent
+BlzGetTriggerFrameValue
+BlzGetTriggerFrameText
+BlzGetSpecialEffectScale
+BlzGetLocale
+IsPlayerRacePrefSet
+GetLocationZ
+CreateUnitPool
+CreateItemPool
+RandomDistChoose
+GetTriggeringRegion
+BlzGetMouseFocusUnit
+BlzGetLocalClientWidth
+BlzGetLocalClientHeight
+BlzGetTriggerPlayerKey
+BlzGetTriggerPlayerMetaKey
+BlzGetTriggerPlayerIsKeyDown
+BlzGetTriggerSyncPrefix
+BlzGetTriggerSyncData
+BlzGroupGetSize
+BlzGroupUnitAt
+
+Initial Triggers:
+Removed Melee Trigger
+AutoCreate 41 Triggers in 4 Categories with this event
+Map Init
+At 0s
+At 3s
+Unit Killed
+Unit Takes Damage
+Unit Pre Takes Damage
+Unit Attacked
+Unit SpellEffect
+Unit Item PickUp
+Unit Drop Item
+Unit Summons
+Unit Uses Item
+Unit Enteres Map
+Unit Learns Skill
+Unit Becomes Reviveable
+Unit Hired
+Unit Buy Item
+Unit Sells Item to Shop
+Unit Research Finised
+Unit Decay
+Unit Level Up
+Unit Revived
+Unit Point Order
+Unit Target Order
+Unit Self Order
+Unit Rescued
+Unit Changes Owner
+Unit Trained
+Unit Transport Loaded
+Unit Stuned
+Player Leaves
+Player Chats
+Player Selects
+Player DeSelects
+Player Mouse Down
+Player Mouse Up
+Player Mouse Moved
+Player Presses Esc
+Game Seconds
+Game Minutes
+Game Loaded
+Game Saved
