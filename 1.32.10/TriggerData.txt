@@ -9331,7 +9331,7 @@ _BlzFrameSetValue_Category=TC_FRAME
 
 BlzFrameSetMinMaxValue=0,framehandle,real,real
 _BlzFrameSetMinMaxValue_DisplayName="Set Min/Max"
-_BlzFrameSetMinMaxValue_Parameters="Set Min/Max of ",~Frame," to ",~real
+_BlzFrameSetMinMaxValue_Parameters="Set Min/Max of ",~Frame," to ",~real," -> ",~real
 _BlzFrameSetMinMaxValue_Defaults=BlzGetFrameByName,0.0,100.0
 _BlzFrameSetMinMaxValue_Category=TC_FRAME
 
@@ -9340,12 +9340,6 @@ _BlzFrameSetStepSize_DisplayName="Set Step Size"
 _BlzFrameSetStepSize_Parameters="Set Step Size of ",~Frame," to ",~real
 _BlzFrameSetStepSize_Defaults=BlzGetFrameByName,1.0
 _BlzFrameSetStepSize_Category=TC_FRAME
-
-BlzFrameSetSize=0,framehandle,real,real
-_BlzFrameSetStepSize_DisplayName="Set Size"
-_BlzFrameSetStepSize_Parameters="Set Size of ",~Frame, to ,~x,/,~y
-_BlzFrameSetSize_Defaults=BlzGetFrameByName,0.04,0.04
-_BlzFrameSetSize_Category=TC_FRAME
 
 BlzFrameSetVertexColor=0,framehandle,integer
 _BlzFrameSetVertexColor_DisplayName="Set vertext Color"
@@ -13352,7 +13346,7 @@ _BlzGetTriggerSyncData_Category=TC_SYNC
 
 BlzGroupGetSize=0,1,integer,group
 _BlzGroupGetSize_DisplayName="Group Get Size"
-_BlzGroupGetSize_Parameters="Group Get Size"
+_BlzGroupGetSize_Parameters="Group Get Size of ",~Group
 _BlzGroupGetSize_Defaults=_
 _BlzGroupGetSize_Category=TC_UNITGROUP
 
