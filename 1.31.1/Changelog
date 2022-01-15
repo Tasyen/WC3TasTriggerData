@@ -1,4 +1,3 @@
-Changes compared to default V1.31.1
 TC_FRAME
 TC_OSKEY
 TC_SYNC
@@ -198,6 +197,8 @@ BlzSetAbilityActivatedExtendedTooltip
 BlzSetItemDescription
 BlzSetItemExtendedTooltip
 
+Disabled all Ability LevelArrayField functions
+Turned all Ability Boolean Level Field presets into abilityintegerlevelfield as the game does not use Ability Boolean Level Field
 
 Removed SaveTrackableHandleBJ SaveGameCacheHandleBJ
 
