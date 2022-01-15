@@ -193,6 +193,7 @@ fogstate=0,0,0,WESTRING_TRIGTYPE_fogstate
 volumegroup=0,0,0,WESTRING_TRIGTYPE_volumegroup
 racepreference=0,0,0,"Race Preference"
 oskeytype=0,0,0,"OskeyType"
+hotkeyint=0,0,0,"Dialog Hotkey Int",integer
 
 // Trigger Non-Variable Types - Utility, only used to simplify triggers
 keyeventtype=1,0,0,WESTRING_TRIGTYPE_keyeventtype,integer
@@ -289,30 +290,30 @@ corpsetype=1,0,0,WESTRING_TRIGTYPE_corpsetype,integer
 stringcaseoption=1,0,0,WESTRING_TRIGTYPE_stringcaseoption,boolean
 
 // Instanced Objects Operation Types
-abilityintegerfield=0,0,1,WESTRING_TRIGTYPE_abilityintegerfield,integer
-abilityrealfield=0,0,1,WESTRING_TRIGTYPE_abilityrealfield,integer
-abilitybooleanfield=0,0,1,WESTRING_TRIGTYPE_abilitybooleanfield,integer
-abilitystringfield=0,0,1,WESTRING_TRIGTYPE_abilitystringfield,integer
-abilityintegerlevelfield=0,1,1,WESTRING_TRIGTYPE_abilityintegerlevelfield,integer
-abilityreallevelfield=0,1,1,WESTRING_TRIGTYPE_abilityreallevelfield,integer
-abilitybooleanlevelfield=0,0,1,WESTRING_TRIGTYPE_abilitybooleanlevelfield,integer
-abilitystringlevelfield=0,0,1,WESTRING_TRIGTYPE_abilitystringlevelfield,integer
-abilityintegerlevelarrayfield=0,0,1,WESTRING_TRIGTYPE_abilityintegerlevelarrayfield,integer
-abilityreallevelarrayfield=0,0,1,WESTRING_TRIGTYPE_abilityreallevelarrayfield,integer
-abilitybooleanlevelarrayfield=0,0,1,WESTRING_TRIGTYPE_abilitybooleanlevelarrayfield,integer
-abilitystringlevelarrayfield=0,0,1,WESTRING_TRIGTYPE_abilitystringlevelarrayfield,integer
-unitintegerfield=0,0,1,WESTRING_TRIGTYPE_unitintegerfield,integer
-unitrealfield=0,0,1,WESTRING_TRIGTYPE_unitrealfield,integer
-unitbooleanfield=0,0,1,WESTRING_TRIGTYPE_unitbooleanfield,integer
-unitstringfield=0,0,1,WESTRING_TRIGTYPE_unitstringfield,integer
-unitweaponintegerfield=0,0,1,WESTRING_TRIGTYPE_unitweaponintegerfield,integer
-unitweaponrealfield=0,0,1,WESTRING_TRIGTYPE_unitweaponrealfield,integer
-unitweaponbooleanfield=0,0,1,WESTRING_TRIGTYPE_unitweaponbooleanfield,integer
-unitweaponstringfield=0,0,1,WESTRING_TRIGTYPE_unitweaponstringfield,integer
-itemintegerfield=0,0,1,WESTRING_TRIGTYPE_itemintegerfield,integer
-itemrealfield=0,0,1,WESTRING_TRIGTYPE_itemrealfield,integer
-itembooleanfield=0,0,1,WESTRING_TRIGTYPE_itembooleanfield,integer
-itemstringfield=0,0,1,WESTRING_TRIGTYPE_itemstringfield,integer
+abilityintegerfield=0,1,1,WESTRING_TRIGTYPE_abilityintegerfield,handle
+abilityrealfield=0,1,1,WESTRING_TRIGTYPE_abilityrealfield,handle
+abilitybooleanfield=0,0,1,WESTRING_TRIGTYPE_abilitybooleanfield,handle
+abilitystringfield=0,0,1,WESTRING_TRIGTYPE_abilitystringfield,handle
+abilityintegerlevelfield=0,1,1,WESTRING_TRIGTYPE_abilityintegerlevelfield,handle
+abilityreallevelfield=0,1,1,WESTRING_TRIGTYPE_abilityreallevelfield,handle
+abilitybooleanlevelfield=0,0,1,WESTRING_TRIGTYPE_abilitybooleanlevelfield,handle
+abilitystringlevelfield=0,0,1,WESTRING_TRIGTYPE_abilitystringlevelfield,handle
+abilityintegerlevelarrayfield=0,0,1,WESTRING_TRIGTYPE_abilityintegerlevelarrayfield,handle
+abilityreallevelarrayfield=0,0,1,WESTRING_TRIGTYPE_abilityreallevelarrayfield,handle
+abilitybooleanlevelarrayfield=0,0,1,WESTRING_TRIGTYPE_abilitybooleanlevelarrayfield,handle
+abilitystringlevelarrayfield=0,0,1,WESTRING_TRIGTYPE_abilitystringlevelarrayfield,handle
+unitintegerfield=0,0,1,WESTRING_TRIGTYPE_unitintegerfield,handle
+unitrealfield=0,0,1,WESTRING_TRIGTYPE_unitrealfield,handle
+unitbooleanfield=0,0,1,WESTRING_TRIGTYPE_unitbooleanfield,handle
+unitstringfield=0,0,1,WESTRING_TRIGTYPE_unitstringfield,handle
+unitweaponintegerfield=0,0,1,WESTRING_TRIGTYPE_unitweaponintegerfield,handle
+unitweaponrealfield=0,0,1,WESTRING_TRIGTYPE_unitweaponrealfield,handle
+unitweaponbooleanfield=0,0,1,WESTRING_TRIGTYPE_unitweaponbooleanfield,handle
+unitweaponstringfield=0,0,1,WESTRING_TRIGTYPE_unitweaponstringfield,handle
+itemintegerfield=0,0,1,WESTRING_TRIGTYPE_itemintegerfield,handle
+itemrealfield=0,0,1,WESTRING_TRIGTYPE_itemrealfield,handle
+itembooleanfield=0,0,1,WESTRING_TRIGTYPE_itembooleanfield,handle
+itemstringfield=0,0,1,WESTRING_TRIGTYPE_itemstringfield,handle
 movetype=0,0,1,WESTRING_TRIGTYPE_movetype,integer
 targetflag=0,0,1,WESTRING_TRIGTYPE_targetflag,integer
 armortype=0,0,1,WESTRING_TRIGTYPE_armortype,integer
@@ -456,13 +457,6 @@ PlayerNP=0,player,Player(PLAYER_NEUTRAL_PASSIVE),WESTRING_PLAYER_NP
 PlayerLocal=0,player,GetLocalPlayer(),"Local Player"
 
 
-//racepreference
-RacePreferenceHuman=0,racepreference,RACE_PREF_HUMAN,"Race Prefrerence Human"
-RacePreferenceOrc=0,racepreference,RACE_PREF_ORC,"Race Prefrerence Orc"
-RacePreferenceUndead=0,racepreference,RACE_PREF_UNDEAD,"Race Prefrerence Undead"
-RacePreferenceNightelf=0,racepreference,RACE_PREF_NIGHTELF,"Race Prefrerence Nightelf"
-RacePreferenceDemon=0,racepreference,RACE_PREF_DEMON,"Race Prefrerence Demon"
-RacePreferenceRandom=0,racepreference,RACE_PREF_RANDOM,"Race Prefrerence Random"
 
 // Forces
 Force00=0,force,bj_FORCE_PLAYER[0],WESTRING_FORCE_00
@@ -520,6 +514,109 @@ Color21=0,playercolor,PLAYER_COLOR_SNOW,WESTRING_UNITCOLOR_21
 Color22=0,playercolor,PLAYER_COLOR_EMERALD,WESTRING_UNITCOLOR_22
 Color23=0,playercolor,PLAYER_COLOR_PEANUT,WESTRING_UNITCOLOR_23
 Color24=1,playercolor,ConvertPlayerColor(24),WESTRING_UNITCOLOR_24
+
+//HotKeyInt
+HotKeyIntNull=0,hotkeyint,0,无
+HotKeyIntA=0,hotkeyint,'A',A
+HotKeyIntB=0,hotkeyint,'B',B
+HotKeyIntC=0,hotkeyint,'C',C
+HotKeyIntD=0,hotkeyint,'D',D
+HotKeyIntE=0,hotkeyint,'E',E
+HotKeyIntF=0,hotkeyint,'F',F
+HotKeyIntG=0,hotkeyint,'G',G
+HotKeyIntH=0,hotkeyint,'H',H
+HotKeyIntI=0,hotkeyint,'I',I
+HotKeyIntJ=0,hotkeyint,'J',J
+HotKeyIntK=0,hotkeyint,'K',K
+HotKeyIntL=0,hotkeyint,'L',L
+HotKeyIntM=0,hotkeyint,'M',M
+HotKeyIntN=0,hotkeyint,'N',N
+HotKeyIntO=0,hotkeyint,'O',O
+HotKeyIntP=0,hotkeyint,'P',P
+HotKeyIntQ=0,hotkeyint,'Q',Q
+HotKeyIntR=0,hotkeyint,'R',R
+HotKeyIntS=0,hotkeyint,'S',S
+HotKeyIntT=0,hotkeyint,'T',T
+HotKeyIntU=0,hotkeyint,'U',U
+HotKeyIntV=0,hotkeyint,'V',V
+HotKeyIntW=0,hotkeyint,'W',W
+HotKeyIntX=0,hotkeyint,'X',X
+HotKeyIntY=0,hotkeyint,'Y',Y
+HotKeyIntZ=0,hotkeyint,'Z',Z
+HotKeyInttilde=0,hotkeyint,256,~
+HotKeyInt1=0,hotkeyint,'1',1
+HotKeyInt2=0,hotkeyint,'2',2
+HotKeyInt3=0,hotkeyint,'3',3
+HotKeyInt4=0,hotkeyint,'4',4
+HotKeyInt5=0,hotkeyint,'5',5
+HotKeyInt6=0,hotkeyint,'6',6
+HotKeyInt7=0,hotkeyint,'7',7
+HotKeyInt8=0,hotkeyint,'8',8
+HotKeyInt9=0,hotkeyint,'9',9
+HotKeyInt0=0,hotkeyint,'0',0
+HotKeyInt-=0,hotkeyint,273,-
+HotKeyIntequals=0,hotkeyint,272,=
+HotKeyInt\=0,hotkeyint,276,\
+HotKeyIntBackspace=0,hotkeyint,514,Backspace
+HotKeyInt[=0,hotkeyint,274,[
+HotKeyInt]=0,hotkeyint,275,]
+HotKeyInt;=0,hotkeyint,277,;
+HotKeyInt'=0,hotkeyint,278,'
+HotKeyIntcomma=0,hotkeyint,279,","
+HotKeyInt.=0,hotkeyint,280,.
+HotKeyInt/=0,hotkeyint,281,/
+HotKeyIntF1=0,hotkeyint,768,F1
+HotKeyIntF2=0,hotkeyint,769,F2
+HotKeyIntF3=0,hotkeyint,770,F3
+HotKeyIntF4=0,hotkeyint,771,F4
+HotKeyIntF5=0,hotkeyint,772,F5
+HotKeyIntF6=0,hotkeyint,773,F6
+HotKeyIntF7=0,hotkeyint,774,F7
+HotKeyIntF8=0,hotkeyint,775,F8
+HotKeyIntF9=0,hotkeyint,776,F9
+HotKeyIntF10=0,hotkeyint,777,F10
+HotKeyIntF11=0,hotkeyint,778,F11
+HotKeyIntF12=0,hotkeyint,779,F12
+HotKeyIntEsc=0,hotkeyint,512,Esc
+HotKeyIntTab=0,hotkeyint,515,Tab
+HotKeyIntCapsLock=0,hotkeyint,526,CapsLock
+HotKeyIntLeft=0,hotkeyint,516,Left
+HotKeyIntRight=0,hotkeyint,518,Right
+HotKeyIntUp=0,hotkeyint,517,Up
+HotKeyIntDown=0,hotkeyint,519,Down
+HotKeyIntPrintScreen=0,hotkeyint,530,PrintScreen
+HotKeyIntScrollLock=0,hotkeyint,528,ScrollLock
+HotKeyIntPause=0,hotkeyint,529,Pause
+HotKeyIntInsert=0,hotkeyint,520,Insert
+HotKeyIntDelete=0,hotkeyint,521,Delete
+HotKeyIntHome=0,hotkeyint,522,Home
+HotKeyIntEnd=0,hotkeyint,523,End
+HotKeyIntPageUp=0,hotkeyint,524,PageUp
+HotKeyIntPageDown=0,hotkeyint,525,PageDown
+HotKeyIntNumpad1=0,hotkeyint,258,Numpad1
+HotKeyIntNumpad2=0,hotkeyint,259,Numpad2
+HotKeyIntNumpad3=0,hotkeyint,260,Numpad3
+HotKeyIntNumpad4=0,hotkeyint,261,Numpad4
+HotKeyIntNumpad5=0,hotkeyint,262,Numpad5
+HotKeyIntNumpad6=0,hotkeyint,263,Numpad6
+HotKeyIntNumpad7=0,hotkeyint,264,Numpad7
+HotKeyIntNumpad8=0,hotkeyint,265,Numpad8
+HotKeyIntNumpad9=0,hotkeyint,266,Numpad9
+HotKeyIntNumpad0=0,hotkeyint,257,Numpad0
+HotKeyIntNumLock=0,hotkeyint,527,NumLock
+HotKeyIntNumpad/=0,hotkeyint,270,Numpad/
+HotKeyIntNumpad*=0,hotkeyint,269,Numpad*
+HotKeyIntNumpad-=0,hotkeyint,268,Numpad-
+HotKeyIntNumpad+=0,hotkeyint,267,Numpad+
+HotKeyIntNumpad.=0,hotkeyint,271,Numpad.
+
+//racepreference
+RacePreferenceHuman=0,racepreference,RACE_PREF_HUMAN,"Race Prefrerence Human"
+RacePreferenceOrc=0,racepreference,RACE_PREF_ORC,"Race Prefrerence Orc"
+RacePreferenceUndead=0,racepreference,RACE_PREF_UNDEAD,"Race Prefrerence Undead"
+RacePreferenceNightelf=0,racepreference,RACE_PREF_NIGHTELF,"Race Prefrerence Nightelf"
+RacePreferenceDemon=0,racepreference,RACE_PREF_DEMON,"Race Prefrerence Demon"
+RacePreferenceRandom=0,racepreference,RACE_PREF_RANDOM,"Race Prefrerence Random"
 
 // Races
 RaceHuman=0,race,RACE_HUMAN,WESTRING_TRIGRACE_HUMAN
@@ -1111,20 +1208,13 @@ FrameEventTypeEditBoxEnter=0,frameeventtype,FRAMEEVENT_EDITBOX_ENTER,FRAMEEVENT_
 //Frame
 FrameHandleGameUI=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI,0)",GameUI
 FrameHandleWorld=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME,0)",WorldFrame
-FrameHandleConsoleUI=0,framehandle,"BlzGetFrameByName(ConsoleUI,0)",ConsoleUI
 FrameHandleChat=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_CHAT_MSG,0)",ChatFrame
 FrameHandleUnitMsg=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_UNIT_MSG,0)",SystemPrintFrame
 FrameHandleUberTooltTip=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_UBERTOOLTIP,0)",UberTooltipFrame
-FrameHandleUpperButtonBar=0,framehandle,"BlzGetFrameByName(UpperButtonBarFrame`,0)",System Button Bar
 FrameHandleSystemButton0=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON,0)",System Button Menu
 FrameHandleSystemButton1=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON,1)",System Button Ally
 FrameHandleSystemButton2=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON,2)",System Button Chat/Log
 FrameHandleSystemButton3=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON,3)",System Button Quest
-FrameHandleResourceBarFrame=0,framehandle,"BlzGetFrameByName(ResourceBarFrame,0)",Resource Bar
-FrameHandleResourceBarGoldText=0,framehandle,"BlzGetFrameByName(ResourceBarGoldText,0)",Resource Gold Text
-FrameHandleResourceBarLumberText=0,framehandle,"BlzGetFrameByName(ResourceBarLumberText,0)",Resource Lumber Text
-FrameHandleResourceBarSupplyText=0,framehandle,"BlzGetFrameByName(ResourceBarSupplyText,0)",Resource Supply Text
-FrameHandleResourceBarUpkeepText=0,framehandle,"BlzGetFrameByName(ResourceBarUpkeepText,0)",Resource Upkeep Text
 FrameHandleMinimap=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP,0)",Minimap
 FrameHandlePortrait=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT,0)",Portrait
 FrameHandleTopMsg=0,framehandle,"BlzGetOriginFrame(ORIGIN_FRAME_TOP_MSG,0)",UpKeepWarningFrame
@@ -1809,70 +1899,70 @@ AbilityRLFHalfDamageFactor=0,abilityreallevelfield,ABILITY_RLF_HALF_DAMAGE_FACTO
 AbilityRLFIntervalBetweenPulses=0,abilityreallevelfield,ABILITY_RLF_INTERVAL_BETWEEN_PULSES,WESTRING_ABILITYRLF_INTERVALBETWEENPULSES
 
 // Ability Boolean Level Field
-AbilityBLFPercentBonusHab2=0,abilitybooleanlevelfield,ABILITY_BLF_PERCENT_BONUS_HAB2,WESTRING_ABILITYBLF_PERCENTBONUSHAB2
-AbilityBLFUseTeleportClusteringHmt3=0,abilitybooleanlevelfield,ABILITY_BLF_USE_TELEPORT_CLUSTERING_HMT3,WESTRING_ABILITYBLF_USETELEPORTCLUSTERINGHMT3
-AbilityBLFNeverMissOcr5=0,abilitybooleanlevelfield,ABILITY_BLF_NEVER_MISS_OCR5,WESTRING_ABILITYBLF_NEVERMISSOCR5
-AbilityBLFExcludeItemDamage=0,abilitybooleanlevelfield,ABILITY_BLF_EXCLUDE_ITEM_DAMAGE,WESTRING_ABILITYBLF_EXCLUDEITEMDAMAGE
-AbilityBLFBackstabDamage=0,abilitybooleanlevelfield,ABILITY_BLF_BACKSTAB_DAMAGE,WESTRING_ABILITYBLF_BACKSTABDAMAGE
-AbilityBLFInheritUpgradesUan3=0,abilitybooleanlevelfield,ABILITY_BLF_INHERIT_UPGRADES_UAN3,WESTRING_ABILITYBLF_INHERITUPGRADESUAN3
-AbilityBLFManaConversionAsPercent=0,abilitybooleanlevelfield,ABILITY_BLF_MANA_CONVERSION_AS_PERCENT,WESTRING_ABILITYBLF_MANACONVERSIONASPERCENT
-AbilityBLFLifeConversionAsPercent=0,abilitybooleanlevelfield,ABILITY_BLF_LIFE_CONVERSION_AS_PERCENT,WESTRING_ABILITYBLF_LIFECONVERSIONASPERCENT
-AbilityBLFLeaveTargetAlive=0,abilitybooleanlevelfield,ABILITY_BLF_LEAVE_TARGET_ALIVE,WESTRING_ABILITYBLF_LEAVETARGETALIVE
-AbilityBLFPercentBonusUau3=0,abilitybooleanlevelfield,ABILITY_BLF_PERCENT_BONUS_UAU3,WESTRING_ABILITYBLF_PERCENTBONUSUAU3
-AbilityBLFDamageIsPercentReceived=0,abilitybooleanlevelfield,ABILITY_BLF_DAMAGE_IS_PERCENT_RECEIVED,WESTRING_ABILITYBLF_DAMAGEISPERCENTRECEIVED
-AbilityBLFMeleeBonus=0,abilitybooleanlevelfield,ABILITY_BLF_MELEE_BONUS,WESTRING_ABILITYBLF_MELEEBONUS
-AbilityBLFRangedBonus=0,abilitybooleanlevelfield,ABILITY_BLF_RANGED_BONUS,WESTRING_ABILITYBLF_RANGEDBONUS
-AbilityBLFFlatBonus=0,abilitybooleanlevelfield,ABILITY_BLF_FLAT_BONUS,WESTRING_ABILITYBLF_FLATBONUS
-AbilityBLFNeverMissHbh5=0,abilitybooleanlevelfield,ABILITY_BLF_NEVER_MISS_HBH5,WESTRING_ABILITYBLF_NEVERMISSHBH5
-AbilityBLFPercentBonusHad2=0,abilitybooleanlevelfield,ABILITY_BLF_PERCENT_BONUS_HAD2,WESTRING_ABILITYBLF_PERCENTBONUSHAD2
-AbilityBLFCanDeactivate=0,abilitybooleanlevelfield,ABILITY_BLF_CAN_DEACTIVATE,WESTRING_ABILITYBLF_CANDEACTIVATE
-AbilityBLFRaisedUnitsAreInvulnerable=0,abilitybooleanlevelfield,ABILITY_BLF_RAISED_UNITS_ARE_INVULNERABLE,WESTRING_ABILITYBLF_RAISEDUNITSAREINVULNERABLE
-AbilityBLFPercentageOar2=0,abilitybooleanlevelfield,ABILITY_BLF_PERCENTAGE_OAR2,WESTRING_ABILITYBLF_PERCENTAGEOAR2
-AbilityBLFSummonBusyUnits=0,abilitybooleanlevelfield,ABILITY_BLF_SUMMON_BUSY_UNITS,WESTRING_ABILITYBLF_SUMMONBUSYUNITS
-AbilityBLFCreatesBlight=0,abilitybooleanlevelfield,ABILITY_BLF_CREATES_BLIGHT,WESTRING_ABILITYBLF_CREATESBLIGHT
-AbilityBLFExplodesOnDeath=0,abilitybooleanlevelfield,ABILITY_BLF_EXPLODES_ON_DEATH,WESTRING_ABILITYBLF_EXPLODESONDEATH
-AbilityBLFAlwaysAutocastFae2=0,abilitybooleanlevelfield,ABILITY_BLF_ALWAYS_AUTOCAST_FAE2,WESTRING_ABILITYBLF_ALWAYSAUTOCASTFAE2
-AbilityBLFRegenerateOnlyAtNight=0,abilitybooleanlevelfield,ABILITY_BLF_REGENERATE_ONLY_AT_NIGHT,WESTRING_ABILITYBLF_REGENERATEONLYATNIGHT
-AbilityBLFShowSelectUnitButton=0,abilitybooleanlevelfield,ABILITY_BLF_SHOW_SELECT_UNIT_BUTTON,WESTRING_ABILITYBLF_SHOWSELECTUNITBUTTON
-AbilityBLFShowUnitIndicator=0,abilitybooleanlevelfield,ABILITY_BLF_SHOW_UNIT_INDICATOR,WESTRING_ABILITYBLF_SHOWUNITINDICATOR
-AbilityBLFChargeOwningPlayer=0,abilitybooleanlevelfield,ABILITY_BLF_CHARGE_OWNING_PLAYER,WESTRING_ABILITYBLF_CHARGEOWNINGPLAYER
-AbilityBLFPercentageArm2=0,abilitybooleanlevelfield,ABILITY_BLF_PERCENTAGE_ARM2,WESTRING_ABILITYBLF_PERCENTAGEARM2
-AbilityBLFTargetIsInvulnerable=0,abilitybooleanlevelfield,ABILITY_BLF_TARGET_IS_INVULNERABLE,WESTRING_ABILITYBLF_TARGETISINVULNERABLE
-AbilityBLFTargetIsMagicImmune=0,abilitybooleanlevelfield,ABILITY_BLF_TARGET_IS_MAGIC_IMMUNE,WESTRING_ABILITYBLF_TARGETISMAGICIMMUNE
-AbilityBLFKillOnCasterDeath=0,abilitybooleanlevelfield,ABILITY_BLF_KILL_ON_CASTER_DEATH,WESTRING_ABILITYBLF_KILLONCASTERDEATH
-AbilityBLFNoTargetRequiredRej4=0,abilitybooleanlevelfield,ABILITY_BLF_NO_TARGET_REQUIRED_REJ4,WESTRING_ABILITYBLF_NOTARGETREQUIREDREJ4
-AbilityBLFAcceptsGold=0,abilitybooleanlevelfield,ABILITY_BLF_ACCEPTS_GOLD,WESTRING_ABILITYBLF_ACCEPTSGOLD
-AbilityBLFAcceptsLumber=0,abilitybooleanlevelfield,ABILITY_BLF_ACCEPTS_LUMBER,WESTRING_ABILITYBLF_ACCEPTSLUMBER
-AbilityBLFPreferHostilesRoa5=0,abilitybooleanlevelfield,ABILITY_BLF_PREFER_HOSTILES_ROA5,WESTRING_ABILITYBLF_PREFERHOSTILESROA5
-AbilityBLFPreferFriendliesRoa6=0,abilitybooleanlevelfield,ABILITY_BLF_PREFER_FRIENDLIES_ROA6,WESTRING_ABILITYBLF_PREFERFRIENDLIESROA6
-AbilityBLFRootedTurning=0,abilitybooleanlevelfield,ABILITY_BLF_ROOTED_TURNING,WESTRING_ABILITYBLF_ROOTEDTURNING
-AbilityBLFAlwaysAutocastSlo3=0,abilitybooleanlevelfield,ABILITY_BLF_ALWAYS_AUTOCAST_SLO3,WESTRING_ABILITYBLF_ALWAYSAUTOCASTSLO3
-AbilityBLFHideButton=0,abilitybooleanlevelfield,ABILITY_BLF_HIDE_BUTTON,WESTRING_ABILITYBLF_HIDEBUTTON
-AbilityBLFUseTeleportClusteringItp2=0,abilitybooleanlevelfield,ABILITY_BLF_USE_TELEPORT_CLUSTERING_ITP2,WESTRING_ABILITYBLF_USETELEPORTCLUSTERINGITP2
-AbilityBLFImmuneToMorphEffects=0,abilitybooleanlevelfield,ABILITY_BLF_IMMUNE_TO_MORPH_EFFECTS,WESTRING_ABILITYBLF_IMMUNETOMORPHEFFECTS
-AbilityBLFDoesNotBlockBuildings=0,abilitybooleanlevelfield,ABILITY_BLF_DOES_NOT_BLOCK_BUILDINGS,WESTRING_ABILITYBLF_DOESNOTBLOCKBUILDINGS
-AbilityBLFAutoAcquireAttackTargets=0,abilitybooleanlevelfield,ABILITY_BLF_AUTO_ACQUIRE_ATTACK_TARGETS,WESTRING_ABILITYBLF_AUTOACQUIREATTACKTARGETS
-AbilityBLFImmuneToMorphEffectsGho2=0,abilitybooleanlevelfield,ABILITY_BLF_IMMUNE_TO_MORPH_EFFECTS_GHO2,WESTRING_ABILITYBLF_IMMUNETOMORPHEFFECTSGHO2
-AbilityBLFDoNotBlockBuildings=0,abilitybooleanlevelfield,ABILITY_BLF_DO_NOT_BLOCK_BUILDINGS,WESTRING_ABILITYBLF_DONOTBLOCKBUILDINGS
-AbilityBLFIncludeRangedDamage=0,abilitybooleanlevelfield,ABILITY_BLF_INCLUDE_RANGED_DAMAGE,WESTRING_ABILITYBLF_INCLUDERANGEDDAMAGE
-AbilityBLFIncludeMeleeDamage=0,abilitybooleanlevelfield,ABILITY_BLF_INCLUDE_MELEE_DAMAGE,WESTRING_ABILITYBLF_INCLUDEMELEEDAMAGE
-AbilityBLFMoveToPartner=0,abilitybooleanlevelfield,ABILITY_BLF_MOVE_TO_PARTNER,WESTRING_ABILITYBLF_MOVETOPARTNER
-AbilityBLFCanBeDispelled=0,abilitybooleanlevelfield,ABILITY_BLF_CAN_BE_DISPELLED,WESTRING_ABILITYBLF_CANBEDISPELLED
-AbilityBLFIgnoreFriendlyBuffs=0,abilitybooleanlevelfield,ABILITY_BLF_IGNORE_FRIENDLY_BUFFS,WESTRING_ABILITYBLF_IGNOREFRIENDLYBUFFS
-AbilityBLFDropItemsOnDeath=0,abilitybooleanlevelfield,ABILITY_BLF_DROP_ITEMS_ON_DEATH,WESTRING_ABILITYBLF_DROPITEMSONDEATH
-AbilityBLFCanUseItems=0,abilitybooleanlevelfield,ABILITY_BLF_CAN_USE_ITEMS,WESTRING_ABILITYBLF_CANUSEITEMS
-AbilityBLFCanGetItems=0,abilitybooleanlevelfield,ABILITY_BLF_CAN_GET_ITEMS,WESTRING_ABILITYBLF_CANGETITEMS
-AbilityBLFCanDropItems=0,abilitybooleanlevelfield,ABILITY_BLF_CAN_DROP_ITEMS,WESTRING_ABILITYBLF_CANDROPITEMS
-AbilityBLFRepairsAllowed=0,abilitybooleanlevelfield,ABILITY_BLF_REPAIRS_ALLOWED,WESTRING_ABILITYBLF_REPAIRSALLOWED
-AbilityBLFCasterOnlySplash=0,abilitybooleanlevelfield,ABILITY_BLF_CASTER_ONLY_SPLASH,WESTRING_ABILITYBLF_CASTERONLYSPLASH
-AbilityBLFNoTargetRequiredIrl4=0,abilitybooleanlevelfield,ABILITY_BLF_NO_TARGET_REQUIRED_IRL4,WESTRING_ABILITYBLF_NOTARGETREQUIREDIRL4
-AbilityBLFDispelOnAttack=0,abilitybooleanlevelfield,ABILITY_BLF_DISPEL_ON_ATTACK,WESTRING_ABILITYBLF_DISPELONATTACK
-AbilityBLFAmountIsRawValue=0,abilitybooleanlevelfield,ABILITY_BLF_AMOUNT_IS_RAW_VALUE,WESTRING_ABILITYBLF_AMOUNTISRAWVALUE
-AbilityBLFSharedSpellCooldown=0,abilitybooleanlevelfield,ABILITY_BLF_SHARED_SPELL_COOLDOWN,WESTRING_ABILITYBLF_SHAREDSPELLCOOLDOWN
-AbilityBLFSleepOnce=0,abilitybooleanlevelfield,ABILITY_BLF_SLEEP_ONCE,WESTRING_ABILITYBLF_SLEEPONCE
-AbilityBLFAllowOnAnyPlayerSlot=0,abilitybooleanlevelfield,ABILITY_BLF_ALLOW_ON_ANY_PLAYER_SLOT,WESTRING_ABILITYBLF_ALLOWONANYPLAYERSLOT
-AbilityBLFDisableOtherAbilities=0,abilitybooleanlevelfield,ABILITY_BLF_DISABLE_OTHER_ABILITIES,WESTRING_ABILITYBLF_DISABLEOTHERABILITIES
-AbilityBLFAllowBounty=0,abilitybooleanlevelfield,ABILITY_BLF_ALLOW_BOUNTY,WESTRING_ABILITYBLF_ALLOWBOUNTY
+AbilityBLFPercentBonusHab2=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Hab2')",WESTRING_ABILITYBLF_PERCENTBONUSHAB2
+AbilityBLFUseTeleportClusteringHmt3=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Hmt3')",WESTRING_ABILITYBLF_USETELEPORTCLUSTERINGHMT3
+AbilityBLFNeverMissOcr5=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ocr5')",WESTRING_ABILITYBLF_NEVERMISSOCR5
+AbilityBLFExcludeItemDamage=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ocr6')",WESTRING_ABILITYBLF_EXCLUDEITEMDAMAGE
+AbilityBLFBackstabDamage=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Owk4')",WESTRING_ABILITYBLF_BACKSTABDAMAGE
+AbilityBLFInheritUpgradesUan3=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Uan3')",WESTRING_ABILITYBLF_INHERITUPGRADESUAN3
+AbilityBLFManaConversionAsPercent=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Udp3')",WESTRING_ABILITYBLF_MANACONVERSIONASPERCENT
+AbilityBLFLifeConversionAsPercent=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Udp4')",WESTRING_ABILITYBLF_LIFECONVERSIONASPERCENT
+AbilityBLFLeaveTargetAlive=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Udp5')",WESTRING_ABILITYBLF_LEAVETARGETALIVE
+AbilityBLFPercentBonusUau3=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Uau3')",WESTRING_ABILITYBLF_PERCENTBONUSUAU3
+AbilityBLFDamageIsPercentReceived=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Eah2')",WESTRING_ABILITYBLF_DAMAGEISPERCENTRECEIVED
+AbilityBLFMeleeBonus=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ear2')",WESTRING_ABILITYBLF_MELEEBONUS
+AbilityBLFRangedBonus=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ear3')",WESTRING_ABILITYBLF_RANGEDBONUS
+AbilityBLFFlatBonus=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ear4')",WESTRING_ABILITYBLF_FLATBONUS
+AbilityBLFNeverMissHbh5=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Hbh5')",WESTRING_ABILITYBLF_NEVERMISSHBH5
+AbilityBLFPercentBonusHad2=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Had2')",WESTRING_ABILITYBLF_PERCENTBONUSHAD2
+AbilityBLFCanDeactivate=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Hds1')",WESTRING_ABILITYBLF_CANDEACTIVATE
+AbilityBLFRaisedUnitsAreInvulnerable=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Hre2')",WESTRING_ABILITYBLF_RAISEDUNITSAREINVULNERABLE
+AbilityBLFPercentageOar2=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Oar2')",WESTRING_ABILITYBLF_PERCENTAGEOAR2
+AbilityBLFSummonBusyUnits=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Btl2')",WESTRING_ABILITYBLF_SUMMONBUSYUNITS
+AbilityBLFCreatesBlight=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Bli2')",WESTRING_ABILITYBLF_CREATESBLIGHT
+AbilityBLFExplodesOnDeath=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Sds6')",WESTRING_ABILITYBLF_EXPLODESONDEATH
+AbilityBLFAlwaysAutocastFae2=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Fae2')",WESTRING_ABILITYBLF_ALWAYSAUTOCASTFAE2
+AbilityBLFRegenerateOnlyAtNight=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Mbt5')",WESTRING_ABILITYBLF_REGENERATEONLYATNIGHT
+AbilityBLFShowSelectUnitButton=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Neu3')",WESTRING_ABILITYBLF_SHOWSELECTUNITBUTTON
+AbilityBLFShowUnitIndicator=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Neu4')",WESTRING_ABILITYBLF_SHOWUNITINDICATOR
+AbilityBLFChargeOwningPlayer=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ans6')",WESTRING_ABILITYBLF_CHARGEOWNINGPLAYER
+AbilityBLFPercentageArm2=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Arm2')",WESTRING_ABILITYBLF_PERCENTAGEARM2
+AbilityBLFTargetIsInvulnerable=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Pos3')",WESTRING_ABILITYBLF_TARGETISINVULNERABLE
+AbilityBLFTargetIsMagicImmune=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Pos4')",WESTRING_ABILITYBLF_TARGETISMAGICIMMUNE
+AbilityBLFKillOnCasterDeath=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ucb6')",WESTRING_ABILITYBLF_KILLONCASTERDEATH
+AbilityBLFNoTargetRequiredRej4=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Rej4')",WESTRING_ABILITYBLF_NOTARGETREQUIREDREJ4
+AbilityBLFAcceptsGold=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Rtn1')",WESTRING_ABILITYBLF_ACCEPTSGOLD
+AbilityBLFAcceptsLumber=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Rtn2')",WESTRING_ABILITYBLF_ACCEPTSLUMBER
+AbilityBLFPreferHostilesRoa5=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Roa5')",WESTRING_ABILITYBLF_PREFERHOSTILESROA5
+AbilityBLFPreferFriendliesRoa6=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Roa6')",WESTRING_ABILITYBLF_PREFERFRIENDLIESROA6
+AbilityBLFRootedTurning=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Roo3')",WESTRING_ABILITYBLF_ROOTEDTURNING
+AbilityBLFAlwaysAutocastSlo3=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Slo3')",WESTRING_ABILITYBLF_ALWAYSAUTOCASTSLO3
+AbilityBLFHideButton=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ihid')",WESTRING_ABILITYBLF_HIDEBUTTON
+AbilityBLFUseTeleportClusteringItp2=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Itp2')",WESTRING_ABILITYBLF_USETELEPORTCLUSTERINGITP2
+AbilityBLFImmuneToMorphEffects=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Eth1')",WESTRING_ABILITYBLF_IMMUNETOMORPHEFFECTS
+AbilityBLFDoesNotBlockBuildings=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Eth2')",WESTRING_ABILITYBLF_DOESNOTBLOCKBUILDINGS
+AbilityBLFAutoAcquireAttackTargets=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Gho1')",WESTRING_ABILITYBLF_AUTOACQUIREATTACKTARGETS
+AbilityBLFImmuneToMorphEffectsGho2=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Gho2')",WESTRING_ABILITYBLF_IMMUNETOMORPHEFFECTSGHO2
+AbilityBLFDoNotBlockBuildings=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Gho3')",WESTRING_ABILITYBLF_DONOTBLOCKBUILDINGS
+AbilityBLFIncludeRangedDamage=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ssk4')",WESTRING_ABILITYBLF_INCLUDERANGEDDAMAGE
+AbilityBLFIncludeMeleeDamage=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ssk5')",WESTRING_ABILITYBLF_INCLUDEMELEEDAMAGE
+AbilityBLFMoveToPartner=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('coa2')",WESTRING_ABILITYBLF_MOVETOPARTNER
+AbilityBLFCanBeDispelled=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('cyc1')",WESTRING_ABILITYBLF_CANBEDISPELLED
+AbilityBLFIgnoreFriendlyBuffs=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('dvm6')",WESTRING_ABILITYBLF_IGNOREFRIENDLYBUFFS
+AbilityBLFDropItemsOnDeath=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('inv2')",WESTRING_ABILITYBLF_DROPITEMSONDEATH
+AbilityBLFCanUseItems=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('inv3')",WESTRING_ABILITYBLF_CANUSEITEMS
+AbilityBLFCanGetItems=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('inv4')",WESTRING_ABILITYBLF_CANGETITEMS
+AbilityBLFCanDropItems=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('inv5')",WESTRING_ABILITYBLF_CANDROPITEMS
+AbilityBLFRepairsAllowed=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('liq4')",WESTRING_ABILITYBLF_REPAIRSALLOWED
+AbilityBLFCasterOnlySplash=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('mfl6')",WESTRING_ABILITYBLF_CASTERONLYSPLASH
+AbilityBLFNoTargetRequiredIrl4=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('irl4')",WESTRING_ABILITYBLF_NOTARGETREQUIREDIRL4
+AbilityBLFDispelOnAttack=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('irl5')",WESTRING_ABILITYBLF_DISPELONATTACK
+AbilityBLFAmountIsRawValue=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('ipv3')",WESTRING_ABILITYBLF_AMOUNTISRAWVALUE
+AbilityBLFSharedSpellCooldown=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('spb2')",WESTRING_ABILITYBLF_SHAREDSPELLCOOLDOWN
+AbilityBLFSleepOnce=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('sla1')",WESTRING_ABILITYBLF_SLEEPONCE
+AbilityBLFAllowOnAnyPlayerSlot=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('sla2')",WESTRING_ABILITYBLF_ALLOWONANYPLAYERSLOT
+AbilityBLFDisableOtherAbilities=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ncl5')",WESTRING_ABILITYBLF_DISABLEOTHERABILITIES
+AbilityBLFAllowBounty=0,abilityintegerlevelfield,"ConvertAbilityIntegerLevelField('Ntm4')",WESTRING_ABILITYBLF_ALLOWBOUNTY
 
 // Ability String Level Field
 AbilitySLFIconNormal=0,abilitystringlevelfield,ABILITY_SLF_ICON_NORMAL,WESTRING_ABILITYSLF_ICONNORMAL
@@ -4622,8 +4712,8 @@ DialogAddButtonBJ=0,dialog,StringExt
 _DialogAddButtonBJ_Defaults=_,_
 _DialogAddButtonBJ_Category=TC_DIALOG
 
-DialogAddButtonWithHotkeyBJ=0,dialog,StringExt,integer
-_DialogAddButtonWithHotkeyBJ_Defaults=_,_,48
+DialogAddButtonWithHotkeyBJ=0,dialog,StringExt,hotkeyint
+_DialogAddButtonWithHotkeyBJ_Defaults=_,_,HotKeyIntA
 _DialogAddButtonWithHotkeyBJ_Category=TC_DIALOG
 
 DialogClearBJ=0,dialog
@@ -5680,7 +5770,7 @@ SetPlayerFlagBJ=0,playerflag,onoffoption,player
 _SetPlayerFlagBJ_Defaults=PlayerFlagGivesBounty,OnOffOff,PlayerNA
 _SetPlayerFlagBJ_Category=TC_PLAYER
 
-SetPlayerTaxRateBJ=1,integer,playerresource,player,player,
+SetPlayerTaxRateBJ=1,integer,playerresource,player,player
 _SetPlayerTaxRateBJ_Defaults=0,PlayerResourceGold,Player00,Player01
 _SetPlayerTaxRateBJ_Limits=0,100,_,_,_,_,_,_
 _SetPlayerTaxRateBJ_Category=TC_PLAYER
@@ -6269,6 +6359,18 @@ BlzSetEventDamage=0,real
 _BlzSetEventDamage_Defaults=0.0
 _BlzSetEventDamage_Category=TC_EVENTRESPONSE
 
+BlzSetEventAttackType=0,attacktype
+_BlzSetEventAttackType_Defaults=AttackTypeChaos
+_BlzSetEventAttackType_Category=TC_EVENTRESPONSE
+
+BlzSetEventDamageType=0,damagetype
+_BlzSetEventDamageType_Defaults=DamageTypeUniversal
+_BlzSetEventDamageType_Category=TC_EVENTRESPONSE
+
+BlzSetEventWeaponType=0,weapontype
+_BlzSetEventWeaponType_Defaults=WeaponTypeMetalHeavyBash
+_BlzSetEventWeaponType_Category=TC_EVENTRESPONSE
+
 BlzSetItemName=0,item,string
 _BlzSetItemName_Defaults=GetLastCreatedItem,_
 _BlzSetItemName_Category=TC_ITEM
@@ -6375,10 +6477,10 @@ BlzSetAbilityStringFieldBJ=0,ability,abilitystringfield,string
 _BlzSetAbilityStringFieldBJ_Defaults=_,_,_
 _BlzSetAbilityStringFieldBJ_Category=TC_ABILITY
 
-BlzSetAbilityBooleanLevelFieldBJ=0,ability,abilitybooleanlevelfield,integer,boolean
-_BlzSetAbilityBooleanLevelFieldBJ_Defaults=_,_,0,true
-_BlzSetAbilityBooleanLevelFieldBJ_Limits=_,_,_,_,0,_,_,_
-_BlzSetAbilityBooleanLevelFieldBJ_Category=TC_ABILITY
+//BlzSetAbilityBooleanLevelFieldBJ=0,ability,abilitybooleanlevelfield,integer,boolean
+//_BlzSetAbilityBooleanLevelFieldBJ_Defaults=_,_,0,true
+//_BlzSetAbilityBooleanLevelFieldBJ_Limits=_,_,_,_,0,_,_,_
+//_BlzSetAbilityBooleanLevelFieldBJ_Category=TC_ABILITY
 
 BlzSetAbilityIntegerLevelFieldBJ=0,ability,abilityintegerlevelfield,integer,integer
 _BlzSetAbilityIntegerLevelFieldBJ_Defaults=_,_,0,50
@@ -6395,65 +6497,65 @@ _BlzSetAbilityStringLevelFieldBJ_Defaults=_,_,0,_
 _BlzSetAbilityStringLevelFieldBJ_Limits=_,_,_,_,0,_,_,_
 _BlzSetAbilityStringLevelFieldBJ_Category=TC_ABILITY
 
-BlzSetAbilityBooleanLevelArrayFieldBJ=0,ability,abilitybooleanlevelarrayfield,integer,integer,boolean
-_BlzSetAbilityBooleanLevelArrayFieldBJ_Defaults=_,_,0,0,true
-_BlzSetAbilityBooleanLevelArrayFieldBJ_Limits=_,_,_,_,0,_,0,_,_,_
-_BlzSetAbilityBooleanLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzSetAbilityBooleanLevelArrayFieldBJ=0,ability,abilitybooleanlevelarrayfield,integer,integer,boolean
+//_BlzSetAbilityBooleanLevelArrayFieldBJ_Defaults=_,_,0,0,true
+//_BlzSetAbilityBooleanLevelArrayFieldBJ_Limits=_,_,_,_,0,_,0,_,_,_
+//_BlzSetAbilityBooleanLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzSetAbilityIntegerLevelArrayFieldBJ=0,ability,abilityintegerlevelarrayfield,integer,integer,integer
-_BlzSetAbilityIntegerLevelArrayFieldBJ_Defaults=_,_,0,0,'Brej'
-_BlzSetAbilityIntegerLevelArrayFieldBJ_Limits=_,_,_,_,0,_,0,_,_,_
-_BlzSetAbilityIntegerLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzSetAbilityIntegerLevelArrayFieldBJ=0,ability,abilityintegerlevelarrayfield,integer,integer,integer
+//_BlzSetAbilityIntegerLevelArrayFieldBJ_Defaults=_,_,0,0,'Brej'
+//_BlzSetAbilityIntegerLevelArrayFieldBJ_Limits=_,_,_,_,0,_,0,_,_,_
+//_BlzSetAbilityIntegerLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzSetAbilityRealLevelArrayFieldBJ=0,ability,abilityreallevelarrayfield,integer,integer,real
-_BlzSetAbilityRealLevelArrayFieldBJ_Defaults=_,_,0,0,0
-_BlzSetAbilityRealLevelArrayFieldBJ_Limits=_,_,0,_,0,_,_,_
-_BlzSetAbilityRealLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzSetAbilityRealLevelArrayFieldBJ=0,ability,abilityreallevelarrayfield,integer,integer,real
+//_BlzSetAbilityRealLevelArrayFieldBJ_Defaults=_,_,0,0,0
+//_BlzSetAbilityRealLevelArrayFieldBJ_Limits=_,_,0,_,0,_,_,_
+//_BlzSetAbilityRealLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzSetAbilityStringLevelArrayFieldBJ=0,ability,abilitystringlevelarrayfield,integer,integer,string
-_BlzSetAbilityStringLevelArrayFieldBJ_Defaults=_,_,0,0,_
-_BlzSetAbilityStringLevelArrayFieldBJ_Limits=_,_,0,_,0,_,_,_
-_BlzSetAbilityStringLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzSetAbilityStringLevelArrayFieldBJ=0,ability,abilitystringlevelarrayfield,integer,integer,string
+//_BlzSetAbilityStringLevelArrayFieldBJ_Defaults=_,_,0,0,_
+//_BlzSetAbilityStringLevelArrayFieldBJ_Limits=_,_,0,_,0,_,_,_
+//_BlzSetAbilityStringLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzAddAbilityBooleanLevelArrayFieldBJ=0,ability,abilitybooleanlevelarrayfield,integer,boolean
-_BlzAddAbilityBooleanLevelArrayFieldBJ_Defaults=_,_,0,true
-_BlzAddAbilityBooleanLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
-_BlzAddAbilityBooleanLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzAddAbilityBooleanLevelArrayFieldBJ=0,ability,abilitybooleanlevelarrayfield,integer,boolean
+//_BlzAddAbilityBooleanLevelArrayFieldBJ_Defaults=_,_,0,true
+//_BlzAddAbilityBooleanLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
+//_BlzAddAbilityBooleanLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzAddAbilityIntegerLevelArrayFieldBJ=0,ability,abilityintegerlevelarrayfield,integer,integer
-_BlzAddAbilityIntegerLevelArrayFieldBJ_Defaults=_,_,0,0
-_BlzAddAbilityIntegerLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
-_BlzAddAbilityIntegerLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzAddAbilityIntegerLevelArrayFieldBJ=0,ability,abilityintegerlevelarrayfield,integer,integer
+//_BlzAddAbilityIntegerLevelArrayFieldBJ_Defaults=_,_,0,0
+//_BlzAddAbilityIntegerLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
+//_BlzAddAbilityIntegerLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzAddAbilityRealLevelArrayFieldBJ=0,ability,abilityreallevelarrayfield,integer,real
-_BlzAddAbilityRealLevelArrayFieldBJ_Defaults=_,_,0,0
-_BlzAddAbilityRealLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
-_BlzAddAbilityRealLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzAddAbilityRealLevelArrayFieldBJ=0,ability,abilityreallevelarrayfield,integer,real
+//_BlzAddAbilityRealLevelArrayFieldBJ_Defaults=_,_,0,0
+//_BlzAddAbilityRealLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
+//_BlzAddAbilityRealLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzAddAbilityStringLevelArrayFieldBJ=0,ability,abilitystringlevelarrayfield,integer,string
-_BlzAddAbilityStringLevelArrayFieldBJ_Defaults=_,_,0,_
-_BlzAddAbilityStringLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
-_BlzAddAbilityStringLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzAddAbilityStringLevelArrayFieldBJ=0,ability,abilitystringlevelarrayfield,integer,string
+//_BlzAddAbilityStringLevelArrayFieldBJ_Defaults=_,_,0,_
+//_BlzAddAbilityStringLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
+//_BlzAddAbilityStringLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzRemoveAbilityBooleanLevelArrayFieldBJ=0,ability,abilitybooleanlevelarrayfield,integer,boolean
-_BlzRemoveAbilityBooleanLevelArrayFieldBJ_Defaults=_,_,0,true
-_BlzRemoveAbilityBooleanLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
-_BlzRemoveAbilityBooleanLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzRemoveAbilityBooleanLevelArrayFieldBJ=0,ability,abilitybooleanlevelarrayfield,integer,boolean
+//_BlzRemoveAbilityBooleanLevelArrayFieldBJ_Defaults=_,_,0,true
+//_BlzRemoveAbilityBooleanLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
+//_BlzRemoveAbilityBooleanLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzRemoveAbilityIntegerLevelArrayFieldBJ=0,ability,abilityintegerlevelarrayfield,integer,integer
-_BlzRemoveAbilityIntegerLevelArrayFieldBJ_Defaults=_,_,0,'Brej'
-_BlzRemoveAbilityIntegerLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
-_BlzRemoveAbilityIntegerLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzRemoveAbilityIntegerLevelArrayFieldBJ=0,ability,abilityintegerlevelarrayfield,integer,integer
+//_BlzRemoveAbilityIntegerLevelArrayFieldBJ_Defaults=_,_,0,'Brej'
+//_BlzRemoveAbilityIntegerLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
+//_BlzRemoveAbilityIntegerLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzRemoveAbilityRealLevelArrayFieldBJ=0,ability,abilityreallevelarrayfield,integer,real
-_BlzRemoveAbilityRealLevelArrayFieldBJ_Defaults=_,_,0,0
-_BlzRemoveAbilityRealLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
-_BlzRemoveAbilityRealLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzRemoveAbilityRealLevelArrayFieldBJ=0,ability,abilityreallevelarrayfield,integer,real
+//_BlzRemoveAbilityRealLevelArrayFieldBJ_Defaults=_,_,0,0
+//_BlzRemoveAbilityRealLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
+//_BlzRemoveAbilityRealLevelArrayFieldBJ_Category=TC_ABILITY
 
-BlzRemoveAbilityStringLevelArrayFieldBJ=0,ability,abilitystringlevelarrayfield,integer,string
-_BlzRemoveAbilityStringLevelArrayFieldBJ_Defaults=_,_,0,_
-_BlzRemoveAbilityStringLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
-_BlzRemoveAbilityStringLevelArrayFieldBJ_Category=TC_ABILITY
+//BlzRemoveAbilityStringLevelArrayFieldBJ=0,ability,abilitystringlevelarrayfield,integer,string
+//_BlzRemoveAbilityStringLevelArrayFieldBJ_Defaults=_,_,0,_
+//_BlzRemoveAbilityStringLevelArrayFieldBJ_Limits=_,_,_,_,0,_,_,_
+//_BlzRemoveAbilityStringLevelArrayFieldBJ_Category=TC_ABILITY
 
 BlzItemAddAbilityBJ=0,item,abilcode
 _BlzItemAddAbilityBJ_Defaults=GetLastCreatedItem,_
@@ -6987,6 +7089,14 @@ ResetTrigger=0,trigger
 _ResetTrigger_Defaults=GetTriggeringTrigger
 _ResetTrigger_Category=TC_TRIGGER
 
+DestroyTrigger=0,trigger
+_DestroyTrigger_Defaults=GetTriggeringTrigger
+_DestroyTrigger_Category=TC_TRIGGER
+
+//PlaceRandomUnitLoc=0,unitpool,player,location,real
+//_PlaceRandomUnitLoc_Defaults=_,Player00,_,bj_UNIT_FACING
+//_PlaceRandomUnitLoc_Category=TC_UNITPOOL
+
 UnitPoolAddUnitType=0,unitpool,unitcode,real
 _UnitPoolAddUnitType_Defaults=_,hfoo,1.0
 _UnitPoolAddUnitType_Category=TC_UNITPOOL
@@ -6994,6 +7104,10 @@ _UnitPoolAddUnitType_Category=TC_UNITPOOL
 UnitPoolRemoveUnitType=0,unitpool,unitcode
 _UnitPoolRemoveUnitType_Defaults=_,hfoo,
 _UnitPoolRemoveUnitType_Category=TC_UNITPOOL
+
+//PlaceRandomItemLoc=0,itempool,location
+//_PlaceRandomItemLoc_Defaults=_,_
+//_PlaceRandomItemLoc_Category=TC_ITEMPOOL
 
 ItemPoolAddItemType=0,itempool,itemcode,real
 _ItemPoolAddItemType_Defaults=_,bgst,1.0
@@ -7007,17 +7121,9 @@ DestroyTimer=0,timer
 _DestroyTimer_Defaults=GetExpiredTimer
 _DestroyTimer_Category=TC_TIMER
 
-BlzSetEventDamageType=0,damagetype
-_BlzSetEventDamageType_Defaults=DamageTypeUniversal
-_BlzSetEventDamageType_Category=TC_EVENTRESPONSE
-
-BlzSetEventAttackType=0,attacktype
-_BlzSetEventAttackType_Defaults=AttackTypeChaos
-_BlzSetEventAttackType_Category=TC_EVENTRESPONSE
-
-BlzSetEventWeaponType=0,weapontype
-_BlzSetEventWeaponType_Defaults=WeaponTypeMetalHeavyBash
-_BlzSetEventWeaponType_Category=TC_EVENTRESPONSE
+WantDestroyGroup=0
+_WantDestroyGroup_Defaults=_
+_WantDestroyGroup_Category=TC_UNITGROUP
 
 UnitMakeAbilityPermanentBJ=0,boolean,abilcode,unit
 _UnitMakeAbilityPermanentBJ_Defaults=true,AHbz,GetTriggerUnit
@@ -7316,10 +7422,10 @@ _BlzGetAbilityBooleanLevelField_Defaults=_,_,0
 _BlzGetAbilityBooleanLevelField_Limits=_,_,_,_,0,_
 _BlzGetAbilityBooleanLevelField_CATEGORY=TC_ABILITY
 
-BlzGetAbilityBooleanLevelArrayField=0,1,boolean,ability,abilitybooleanlevelarrayfield,integer,integer
-_BlzGetAbilityBooleanLevelArrayField_Defaults=_,_,0,0
-_BlzGetAbilityBooleanLevelArrayField_Limits=_,_,_,_,0,_,0,_
-_BlzGetAbilityBooleanLevelArrayField_CATEGORY=TC_ABILITY
+//BlzGetAbilityBooleanLevelArrayField=0,1,boolean,ability,abilitybooleanlevelarrayfield,integer,integer
+//_BlzGetAbilityBooleanLevelArrayField_Defaults=_,_,0,0
+//_BlzGetAbilityBooleanLevelArrayField_Limits=_,_,_,_,0,_,0,_
+//_BlzGetAbilityBooleanLevelArrayField_CATEGORY=TC_ABILITY
 
 BlzSetAbilityBooleanField=0,1,boolean,ability,abilitybooleanfield,boolean
 _BlzSetAbilityBooleanField_Defaults=_,_,true
@@ -7358,65 +7464,65 @@ _BlzSetAbilityStringLevelField_Defaults=_,_,0,_
 _BlzSetAbilityStringLevelField_Limits=_,_,_,_,0,_,_,_
 _BlzSetAbilityStringLevelField_CATEGORY=TC_ABILITY
 
-BlzSetAbilityBooleanLevelArrayField=0,1,boolean,ability,abilitybooleanlevelarrayfield,integer,integer,boolean
-_BlzSetAbilityBooleanLevelArrayField_Defaults=_,_,0,0,true
-_BlzSetAbilityBooleanLevelArrayField_Limits=_,_,_,_,0,_,0,_,_,_
-_BlzSetAbilityBooleanLevelArrayField_CATEGORY=TC_ABILITY
+//BlzSetAbilityBooleanLevelArrayField=0,1,boolean,ability,abilitybooleanlevelarrayfield,integer,integer,boolean
+//_BlzSetAbilityBooleanLevelArrayField_Defaults=_,_,0,0,true
+//_BlzSetAbilityBooleanLevelArrayField_Limits=_,_,_,_,0,_,0,_,_,_
+//_BlzSetAbilityBooleanLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzSetAbilityIntegerLevelArrayField=0,1,boolean,ability,abilityintegerlevelarrayfield,integer,integer,integer
-_BlzSetAbilityIntegerLevelArrayField_Defaults=_,_,0,0,'Brej'
-_BlzSetAbilityIntegerLevelArrayField_Limits=_,_,_,_,0,_,0,_,_,_
-_BlzSetAbilityIntegerLevelArrayField_CATEGORY=TC_ABILITY
+//BlzSetAbilityIntegerLevelArrayField=0,1,boolean,ability,abilityintegerlevelarrayfield,integer,integer,integer
+//_BlzSetAbilityIntegerLevelArrayField_Defaults=_,_,0,0,'Brej'
+//_BlzSetAbilityIntegerLevelArrayField_Limits=_,_,_,_,0,_,0,_,_,_
+//_BlzSetAbilityIntegerLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzSetAbilityRealLevelArrayField=0,1,boolean,ability,abilityreallevelarrayfield,integer,integer,real
-_BlzSetAbilityRealLevelArrayField_Defaults=_,_,0,0,0
-_BlzSetAbilityRealLevelArrayField_Limits=_,_,0,_,0,_,_,_
-_BlzSetAbilityRealLevelArrayField_CATEGORY=TC_ABILITY
+//BlzSetAbilityRealLevelArrayField=0,1,boolean,ability,abilityreallevelarrayfield,integer,integer,real
+//_BlzSetAbilityRealLevelArrayField_Defaults=_,_,0,0,0
+//_BlzSetAbilityRealLevelArrayField_Limits=_,_,0,_,0,_,_,_
+//_BlzSetAbilityRealLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzSetAbilityStringLevelArrayField=0,1,boolean,ability,abilitystringlevelarrayfield,integer,integer,string
-_BlzSetAbilityStringLevelArrayField_Defaults=_,_,0,0,_
-_BlzSetAbilityStringLevelArrayField_Limits=_,_,0,_,0,_,_,_
-_BlzSetAbilityStringLevelArrayField_CATEGORY=TC_ABILITY
+//BlzSetAbilityStringLevelArrayField=0,1,boolean,ability,abilitystringlevelarrayfield,integer,integer,string
+//_BlzSetAbilityStringLevelArrayField_Defaults=_,_,0,0,_
+//_BlzSetAbilityStringLevelArrayField_Limits=_,_,0,_,0,_,_,_
+//_BlzSetAbilityStringLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzAddAbilityBooleanLevelArrayField=0,1,boolean,ability,abilitybooleanlevelarrayfield,integer,boolean
-_BlzAddAbilityBooleanLevelArrayField_Defaults=_,_,0,true
-_BlzAddAbilityBooleanLevelArrayField_Limits=_,_,_,_,0,_,_,_
-_BlzAddAbilityBooleanLevelArrayField_CATEGORY=TC_ABILITY
+//BlzAddAbilityBooleanLevelArrayField=0,1,boolean,ability,abilitybooleanlevelarrayfield,integer,boolean
+//_BlzAddAbilityBooleanLevelArrayField_Defaults=_,_,0,true
+//_BlzAddAbilityBooleanLevelArrayField_Limits=_,_,_,_,0,_,_,_
+//_BlzAddAbilityBooleanLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzAddAbilityIntegerLevelArrayField=0,1,boolean,ability,abilityintegerlevelarrayfield,integer,integer
-_BlzAddAbilityIntegerLevelArrayField_Defaults=_,_,0,0
-_BlzAddAbilityIntegerLevelArrayField_Limits=_,_,_,_,0,_,_,_
-_BlzAddAbilityIntegerLevelArrayField_CATEGORY=TC_ABILITY
+//BlzAddAbilityIntegerLevelArrayField=0,1,boolean,ability,abilityintegerlevelarrayfield,integer,integer
+//_BlzAddAbilityIntegerLevelArrayField_Defaults=_,_,0,0
+//_BlzAddAbilityIntegerLevelArrayField_Limits=_,_,_,_,0,_,_,_
+//_BlzAddAbilityIntegerLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzAddAbilityRealLevelArrayField=0,1,boolean,ability,abilityreallevelarrayfield,integer,real
-_BlzAddAbilityRealLevelArrayField_Defaults=_,_,0,0
-_BlzAddAbilityRealLevelArrayField_Limits=_,_,_,_,0,_,_,_
-_BlzAddAbilityRealLevelArrayField_CATEGORY=TC_ABILITY
+//BlzAddAbilityRealLevelArrayField=0,1,boolean,ability,abilityreallevelarrayfield,integer,real
+//_BlzAddAbilityRealLevelArrayField_Defaults=_,_,0,0
+//_BlzAddAbilityRealLevelArrayField_Limits=_,_,_,_,0,_,_,_
+//_BlzAddAbilityRealLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzAddAbilityStringLevelArrayField=0,1,boolean,ability,abilitystringlevelarrayfield,integer,string
-_BlzAddAbilityStringLevelArrayField_Defaults=_,_,0,_
-_BlzAddAbilityStringLevelArrayField_Limits=_,_,_,_,0,_,_,_
-_BlzAddAbilityStringLevelArrayField_CATEGORY=TC_ABILITY
+//BlzAddAbilityStringLevelArrayField=0,1,boolean,ability,abilitystringlevelarrayfield,integer,string
+//_BlzAddAbilityStringLevelArrayField_Defaults=_,_,0,_
+//_BlzAddAbilityStringLevelArrayField_Limits=_,_,_,_,0,_,_,_
+//_BlzAddAbilityStringLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzRemoveAbilityBooleanLevelArrayField=0,1,boolean,ability,abilitybooleanlevelarrayfield,integer,boolean
-_BlzRemoveAbilityBooleanLevelArrayField_Defaults=_,_,0,true
-_BlzRemoveAbilityBooleanLevelArrayField_Limits=_,_,_,_,0,_,_,_
-_BlzRemoveAbilityBooleanLevelArrayField_CATEGORY=TC_ABILITY
+//BlzRemoveAbilityBooleanLevelArrayField=0,1,boolean,ability,abilitybooleanlevelarrayfield,integer,boolean
+//_BlzRemoveAbilityBooleanLevelArrayField_Defaults=_,_,0,true
+//_BlzRemoveAbilityBooleanLevelArrayField_Limits=_,_,_,_,0,_,_,_
+//_BlzRemoveAbilityBooleanLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzRemoveAbilityIntegerLevelArrayField=0,1,boolean,ability,abilityintegerlevelarrayfield,integer,integer
-_BlzRemoveAbilityIntegerLevelArrayField_Defaults=_,_,0,'Brej'
-_BlzRemoveAbilityIntegerLevelArrayField_Limits=_,_,_,_,0,_,_,_
-_BlzRemoveAbilityIntegerLevelArrayField_CATEGORY=TC_ABILITY
+//BlzRemoveAbilityIntegerLevelArrayField=0,1,boolean,ability,abilityintegerlevelarrayfield,integer,integer
+//_BlzRemoveAbilityIntegerLevelArrayField_Defaults=_,_,0,'Brej'
+//_BlzRemoveAbilityIntegerLevelArrayField_Limits=_,_,_,_,0,_,_,_
+//_BlzRemoveAbilityIntegerLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzRemoveAbilityRealLevelArrayField=0,1,boolean,ability,abilityreallevelarrayfield,integer,real
-_BlzRemoveAbilityRealLevelArrayField_Defaults=_,_,0,0
-_BlzRemoveAbilityRealLevelArrayField_Limits=_,_,_,_,0,_,_,_
-_BlzRemoveAbilityRealLevelArrayField_CATEGORY=TC_ABILITY
+//BlzRemoveAbilityRealLevelArrayField=0,1,boolean,ability,abilityreallevelarrayfield,integer,real
+//_BlzRemoveAbilityRealLevelArrayField_Defaults=_,_,0,0
+//_BlzRemoveAbilityRealLevelArrayField_Limits=_,_,_,_,0,_,_,_
+//_BlzRemoveAbilityRealLevelArrayField_CATEGORY=TC_ABILITY
 
-BlzRemoveAbilityStringLevelArrayField=0,1,boolean,ability,abilitystringlevelarrayfield,integer,string
-_BlzRemoveAbilityStringLevelArrayField_Defaults=_,_,0,_
-_BlzRemoveAbilityStringLevelArrayField_Limits=_,_,_,_,0,_,_,_
-_BlzRemoveAbilityStringLevelArrayField_CATEGORY=TC_ABILITY
+//BlzRemoveAbilityStringLevelArrayField=0,1,boolean,ability,abilitystringlevelarrayfield,integer,string
+//_BlzRemoveAbilityStringLevelArrayField_Defaults=_,_,0,_
+//_BlzRemoveAbilityStringLevelArrayField_Limits=_,_,_,_,0,_,_,_
+//_BlzRemoveAbilityStringLevelArrayField_CATEGORY=TC_ABILITY
 
 BlzItemAddAbility=0,1,boolean,item,abilcode
 _BlzItemAddAbility_Defaults=GetLastCreatedItem,_
@@ -8250,7 +8356,7 @@ _BlzGetAbilityManaCost_Category=TC_ABILITY
 
 BlzGetUnitAbilityManaCost=0,1,integer,unit,abilcode,integer
 _BlzGetUnitAbilityManaCost_Defaults=GetTriggerUnit,_,0
-_BlzGetUnitAbilityManaCost_Limits-_,_,_,_,0,_
+_BlzGetUnitAbilityManaCost_Limits=_,_,_,_,0,_
 _BlzGetUnitAbilityManaCost_Category=TC_UNIT
 
 BlzGetAbilityIntegerField=0,1,integer,ability,abilityintegerfield
@@ -8262,10 +8368,10 @@ _BlzGetAbilityIntegerLevelField_Defaults=_,_,0
 _BlzGetAbilityIntegerLevelField_Limits=_,_,_,_,0,_
 _BlzGetAbilityIntegerLevelField_CATEGORY=TC_ABILITY
 
-BlzGetAbilityIntegerLevelArrayField=0,1,integer,ability,abilityintegerlevelarrayfield,integer,integer
-_BlzGetAbilityIntegerLevelArrayField_Defaults=_,_,0,0
-_BlzGetAbilityIntegerLevelArrayField_Limits=_,_,_,_,0,_,0,_
-_BlzGetAbilityIntegerLevelArrayField_CATEGORY=TC_ABILITY
+//BlzGetAbilityIntegerLevelArrayField=0,1,integer,ability,abilityintegerlevelarrayfield,integer,integer
+//_BlzGetAbilityIntegerLevelArrayField_Defaults=_,_,0,0
+//_BlzGetAbilityIntegerLevelArrayField_Limits=_,_,_,_,0,_,0,_
+//_BlzGetAbilityIntegerLevelArrayField_CATEGORY=TC_ABILITY
 
 BlzGetUnitIntegerField=0,1,integer,unit,unitintegerfield
 _BlzGetUnitIntegerField_Defaults=GetTriggerUnit,_
@@ -8383,6 +8489,19 @@ _GetDestructableOccluderHeight_Category=TC_DESTRUCT
 GetEventDamage=0,0,real
 _GetEventDamage_Defaults=
 _GetEventDamage_Category=TC_EVENTRESPONSE
+
+// custom added
+BlzGetEventDamageType=0,0,damagetype
+_BlzGetEventDamageType_Defaults=
+_BlzGetEventDamageType_Category=TC_EVENTRESPONSE
+
+BlzGetEventAttackType=0,0,attacktype
+_BlzGetEventAttackType_Defaults=
+_BlzGetEventAttackType_Category=TC_EVENTRESPONSE
+
+BlzGetEventWeaponType=0,0,weapontype
+_BlzGetEventWeaponType_Defaults=
+_BlzGetEventWeaponType_Category=TC_EVENTRESPONSE
 
 GetTournamentFinishSoonTimeRemaining=1,0,real
 _GetTournamentFinishSoonTimeRemaining_Defaults=
@@ -8666,10 +8785,10 @@ _BlzGetAbilityRealLevelField_Defaults=_,_,0
 _BlzGetAbilityRealLevelField_Limites=_,_,_,_,0,_
 _BlzGetAbilityRealLevelField_CATEGORY=TC_ABILITY
 
-BlzGetAbilityRealLevelArrayField=0,1,real,ability,abilityreallevelarrayfield,integer,integer
-_BlzGetAbilityRealLevelArrayField_Defaults=_,_,0,0
-_BlzGetAbilityRealLevelArrayField_Limits=_,_,_,_,0,_,0,_
-_BlzGetAbilityRealLevelArrayField_CATEGORY=TC_ABILITY
+//BlzGetAbilityRealLevelArrayField=0,1,real,ability,abilityreallevelarrayfield,integer,integer
+//_BlzGetAbilityRealLevelArrayField_Defaults=_,_,0,0
+//_BlzGetAbilityRealLevelArrayField_Limits=_,_,_,_,0,_,0,_
+//_BlzGetAbilityRealLevelArrayField_CATEGORY=TC_ABILITY
 
 BlzGetUnitRealField=0,1,real,unit,unitrealfield
 _BlzGetUnitRealField_Defaults=GetTriggerUnit,_
@@ -8848,10 +8967,10 @@ _BlzGetAbilityStringLevelField_Defaults=_,_,0
 _BlzGetAbilityStringLevelField_Limits=_,_,_,_,0,_
 _BlzGetAbilityStringLevelField_CATEGORY=TC_ABILITY
 
-BlzGetAbilityStringLevelArrayField=0,1,string,ability,abilitystringfield,integer,integer
-_BlzGetAbilityStringLevelArrayField_Defaults=_,_,0,0
-_BlzGetAbilityStringLevelArrayField_Limits=_,_,_,_,0,_,0,_
-_BlzGetAbilityStringLevelArrayField_CATEGORY=TC_ABILITY
+//BlzGetAbilityStringLevelArrayField=0,1,string,ability,abilitystringfield,integer,integer
+//_BlzGetAbilityStringLevelArrayField_Defaults=_,_,0,0
+//_BlzGetAbilityStringLevelArrayField_Limits=_,_,_,_,0,_,0,_
+//_BlzGetAbilityStringLevelArrayField_CATEGORY=TC_ABILITY
 
 BlzGetUnitStringField=0,1,string,unit,unitstringfield
 _BlzGetUnitStringField_Defaults=GetTriggerUnit,_
@@ -9314,7 +9433,6 @@ GetLearnedSkillBJ=0,0,abilcode
 _GetLearnedSkillBJ_Defaults=
 _GetLearnedSkillBJ_Category=TC_EVENTRESPONSE
 
-
 // returns player
 GetEnumPlayer=0,0,player
 _GetEnumPlayer_Defaults=
@@ -9634,18 +9752,6 @@ _GetLastCreatedTextTag_Defaults=
 _GetLastCreatedTextTag_Category=TC_LAST
 
 //Custom added
-BlzGetEventDamageType=1,0,damagetype
-_BlzGetEventDamageType_Defaults=
-_BlzGetEventDamageType_Category=TC_EVENTRESPONSE
-
-BlzGetEventAttackType=1,0,attacktype
-_BlzGetEventAttackType_Defaults=
-_BlzGetEventAttackType_Category=TC_EVENTRESPONSE
-
-BlzGetEventWeaponType=1,0,weapontype
-_BlzGetEventWeaponType_Defaults=
-_BlzGetEventWeaponType_Category=TC_EVENTRESPONSE
-
 GetSpellAbility=0,1,ability
 _GetSpellAbility_Defaults=
 _GetSpellAbility_Category=TC_EVENTRESPONSE
@@ -9803,7 +9909,6 @@ BlzGetLocalClientHeight=0,1,integer
 _BlzGetLocalClientHeight_Defaults=
 _BlzGetLocalClientHeight_Category=TC_NOTHING
 
-
 BlzGetTriggerPlayerKey=0,1,oskeytype
 _BlzGetTriggerPlayerKey_Defaults=
 _BlzGetTriggerPlayerKey_Category=TC_OSKEY
@@ -9836,12 +9941,13 @@ _BlzGroupUnitAt_Category=TC_UNITGROUP
 //***************************************************************************
 [DefaultTriggerCategories]
 // Defines categories to be automatically added to new maps
-NumCategories=4
+NumCategories=5
 
-Category01=Map Init
-Category02=Unit Event Triggers
-Category03=Player Event Triggers
-Category04=Utility
+Category01=TasCustomGUI
+Category02=WESTRING_INITIALIZATION
+Category03=Unit Event Triggers
+Category04=Player Event Triggers
+Category05=Utility
 
 //***************************************************************************
 [DefaultTriggers]
@@ -9849,151 +9955,156 @@ Category04=Utility
 NumTriggers=41
 
 // Melee Initialization
-Trigger01Name=Map Init
+Trigger01Name="Melee Initialization"
 Trigger01Comment=WESTRING_MELEEINITIALIZATION_COMMENT
-Trigger01Category=1
+Trigger01Category=2
 Trigger01Events=1
 Trigger01Event01=MapInitializationEvent
 Trigger01Conditions=0
-Trigger01Actions=3
-Trigger01Action01=ForForceMultiple,GetPlayersAll,
-Trigger01Action02=SetPlayerState,GetEnumPlayer,PlayerStateGold,1000
-Trigger01Action03=SetPlayerState,GetEnumPlayer,PlayerStateLumber,500
+Trigger01Actions=8
+Trigger01Action01=MeleeStartingVisibility
+Trigger01Action02=MeleeStartingHeroLimit
+Trigger01Action03=MeleeGrantHeroItems
+Trigger01Action04=MeleeStartingResources
+Trigger01Action05=MeleeClearExcessUnits
+Trigger01Action06=MeleeStartingUnits
+Trigger01Action07=MeleeStartingAI
+Trigger01Action08=MeleeInitVictoryDefeat
 
 Trigger02Name=Unit Takes Damage
-Trigger02Category=2
+Trigger02Category=3
 Trigger02Events=1
 Trigger02Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventDamaged
 
 Trigger03Name=Unit Pre Takes Damage
-Trigger03Category=2
+Trigger03Category=3
 Trigger03Events=1
 Trigger03Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventDamaging
 
 Trigger04Name=At 0s
-Trigger04Category=1
+Trigger04Category=2
 Trigger04Events=1
 Trigger04Event01=TriggerRegisterTimerEventSingle,0.0
 
 Trigger05Name=Unit Attacked
-Trigger05Category=2
+Trigger05Category=3
 Trigger05Events=1
 Trigger05Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventAttacked
 
 
 Trigger06Name=Unit SpellEffect
-Trigger06Category=2
+Trigger06Category=3
 Trigger06Events=1
 Trigger06Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventSpellEffect
 
 Trigger07Name=Unit Item PickUp
-Trigger07Category=2
+Trigger07Category=3
 Trigger07Events=1
 Trigger07Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventHeroPickUpItem
 
 Trigger08Name=Unit Drop Item
-Trigger08Category=2
+Trigger08Category=3
 Trigger08Events=1
 Trigger08Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventHeroDropItem
 
 Trigger09Name=Unit Summons
-Trigger09Category=2
+Trigger09Category=3
 Trigger09Events=1
 Trigger09Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventSummoned
 
 Trigger10Name=Unit Uses Item
-Trigger10Category=2
+Trigger10Category=3
 Trigger10Events=1
 Trigger10Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventHeroUseItem
 
 Trigger11Name=Unit Enteres Map
-Trigger11Category=2
+Trigger11Category=3
 Trigger11Events=1
 Trigger11Event01=TriggerRegisterEnterRectSimple,GetPlayableMapRect
 
 Trigger12Name=Unit Learns Skill
-Trigger12Category=2
+Trigger12Category=3
 Trigger12Events=1
 Trigger12Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventHero_Skill
 
 Trigger13Name=Unit Becomes Reviveable
-Trigger13Category=2
+Trigger13Category=3
 Trigger13Events=1
 Trigger13Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventHero_Revivable
 
 
 Trigger14Name=Unit Hired
-Trigger14Category=2
+Trigger14Category=3
 Trigger14Events=1
 Trigger14Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventSell
 
 Trigger15Name=Unit Buy Item
-Trigger15Category=2
+Trigger15Category=3
 Trigger15Events=1
 Trigger15Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventSellItem
 
 Trigger16Name=Unit Sells Item to Shop
-Trigger16Category=2
+Trigger16Category=3
 Trigger16Events=1
 Trigger16Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventPawnItem
 
 Trigger17Name=Unit Research Finised
-Trigger176Category=2
+Trigger176Category=3
 Trigger17Events=1
 Trigger17Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventResearch_Finish
 
 Trigger17Name=Unit Decay
-Trigger17Category=2
+Trigger17Category=3
 Trigger17Events=1
 Trigger17Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventDecay
 
 Trigger18Name=Unit Level Up
-Trigger18Category=2
+Trigger18Category=3
 Trigger18Events=1
 Trigger18Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventHero_Level
 
 Trigger19Name=Unit Revived
-Trigger19Category=2
+Trigger19Category=3
 Trigger19Events=1
 Trigger19Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventReviveFinish
 
 Trigger20Name=Unit Point Order
-Trigger20Category=2
+Trigger20Category=3
 Trigger20Events=1
 Trigger20Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventIssued_Point_Order
 
 Trigger21Name=Unit Target Order
-Trigger21Category=2
+Trigger21Category=3
 Trigger21Events=1
 Trigger21Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventIssued_Unit_Order
 
 Trigger22Name=Unit Self Order
-Trigger22Category=2
+Trigger22Category=3
 Trigger22Events=1
 Trigger22Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventIssued_Order
 
 Trigger23Name=Unit Rescued
-Trigger23Category=2
+Trigger23Category=3
 Trigger23Events=1
 Trigger23Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventRescued
 
 Trigger24Name=Unit Changes Owner
-Trigger24Category=2
+Trigger24Category=3
 Trigger24Events=1
 Trigger24Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventChangesOwner
 
 Trigger25Name=Unit Trained
-Trigger25Category=2
+Trigger25Category=3
 Trigger25Events=1
 Trigger25Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventTrain_Finish
 
 Trigger26Name=Unit Transport Loaded
-Trigger26Category=2
+Trigger26Category=3
 Trigger26Events=1
 Trigger26Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventLoaded
 
 Trigger27Name=Player Leaves
-Trigger27Category=3
+Trigger27Category=4
 Trigger27Events=24
 Trigger27Event01=TriggerRegisterPlayerEventLeave,Player00
 Trigger27Event02=TriggerRegisterPlayerEventLeave,Player01
@@ -10021,7 +10132,7 @@ Trigger27Event23=TriggerRegisterPlayerEventLeave,Player22
 Trigger27Event24=TriggerRegisterPlayerEventLeave,Player23
 
 Trigger28Name=Player Chats
-Trigger28Category=3
+Trigger28Category=4
 Trigger28Events=24
 Trigger28Event01=TriggerRegisterPlayerChatEvent,Player00,,ChatMatchTypeSubstring
 Trigger28Event02=TriggerRegisterPlayerChatEvent,Player01,,ChatMatchTypeSubstring
@@ -10049,12 +10160,12 @@ Trigger28Event23=TriggerRegisterPlayerChatEvent,Player22,,ChatMatchTypeSubstring
 Trigger28Event24=TriggerRegisterPlayerChatEvent,Player23,,ChatMatchTypeSubstring
 
 Trigger29Name=Player Selects
-Trigger29Category=3
+Trigger29Category=4
 Trigger29Events=1
 Trigger29Event01=TriggerRegisterAnyUnitEventBJ,EVENT_PLAYER_UNIT_SELECTED
 
 Trigger30Name=Player Mouse Down
-Trigger30Category=3
+Trigger30Category=4
 Trigger30Events=24
 Trigger30Event01=TriggerRegisterPlayerMouseEventBJ,Player00,MouseEventTypeDown
 Trigger30Event02=TriggerRegisterPlayerMouseEventBJ,Player01,MouseEventTypeDown
@@ -10082,7 +10193,7 @@ Trigger30Event23=TriggerRegisterPlayerMouseEventBJ,Player22,MouseEventTypeDown
 Trigger30Event24=TriggerRegisterPlayerMouseEventBJ,Player23,MouseEventTypeDown
 
 Trigger31Name=Player Mouse Up
-Trigger31Category=3
+Trigger31Category=4
 Trigger31Events=24
 Trigger31Event01=TriggerRegisterPlayerMouseEventBJ,Player00,MouseEventTypeUp
 Trigger31Event02=TriggerRegisterPlayerMouseEventBJ,Player01,MouseEventTypeUp
@@ -10110,7 +10221,7 @@ Trigger31Event23=TriggerRegisterPlayerMouseEventBJ,Player22,MouseEventTypeUp
 Trigger31Event24=TriggerRegisterPlayerMouseEventBJ,Player23,MouseEventTypeUp
 
 Trigger32Name=Player Mouse Moved
-Trigger32Category=3
+Trigger32Category=4
 Trigger32Events=24
 Trigger32Event01=TriggerRegisterPlayerMouseEventBJ,Player00,MouseEventTypeMove
 Trigger32Event02=TriggerRegisterPlayerMouseEventBJ,Player01,MouseEventTypeMove
@@ -10138,38 +10249,38 @@ Trigger32Event23=TriggerRegisterPlayerMouseEventBJ,Player22,MouseEventTypeMove
 Trigger32Event24=TriggerRegisterPlayerMouseEventBJ,Player23,MouseEventTypeMove
 
 Trigger33Name=Game Seconds
-Trigger33Category=4
+Trigger33Category=5
 Trigger33Events=1
 Trigger33Event01=TriggerRegisterTimerEventPeriodic,1.0
 
 Trigger34Name=Game Minutes
-Trigger34Category=4
+Trigger34Category=5
 Trigger34Events=1
 Trigger34Event01=TriggerRegisterTimerEventPeriodic,60.0
 
 Trigger35Name=Game Loaded
-Trigger35Category=4
+Trigger35Category=5
 Trigger35Events=1
 Trigger35Event01=TriggerRegisterGameLoadedEventBJ
 
 Trigger36Name=Game Saved
-Trigger36Category=4
+Trigger36Category=5
 Trigger36Events=1
 Trigger36Event01=TriggerRegisterGameSavedEventBJ
 
 Trigger37Name=At 3s
-Trigger37Category=1
+Trigger37Category=2
 Trigger37Events=1
 Trigger37Event01=TriggerRegisterTimerEventSingle,3.0
 
 Trigger38Name=Unit Killed
-Trigger38Category=2
+Trigger38Category=3
 Trigger38Events=1
 Trigger38Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventDeath
 
 
 Trigger39Name=Player Presses Esc
-Trigger39Category=3
+Trigger39Category=4
 Trigger39Events=24
 Trigger39Event01=TriggerRegisterPlayerEventEndCinematic,Player00
 Trigger39Event02=TriggerRegisterPlayerEventEndCinematic,Player01
@@ -10197,13 +10308,28 @@ Trigger39Event23=TriggerRegisterPlayerEventEndCinematic,Player22
 Trigger39Event24=TriggerRegisterPlayerEventEndCinematic,Player23
 
 Trigger40Name=Player DeSelects
-Trigger40Category=3
+Trigger40Category=4
 Trigger40Events=1
 Trigger40Event01=TriggerRegisterAnyUnitEventBJ,EVENT_PLAYER_UNIT_DESELECTED
 
 Trigger41Name=Unit Stuned
-Trigger41Category=2
+Trigger41Category=3
 Trigger41Events=1
 Trigger41Event01=TriggerRegisterAnyUnitEventBJ,PlayerUnitEventIssued_Unit_Order
 Trigger41Conditions=1
 Trigger41Condition01=OperatorCompareInteger,GetIssuedOrderId(),OperatorEqual,851973
+
+// TascustomGUI
+Trigger42Name="TasCustomGUI"
+Trigger42Comment="Custom function required for some new GUI-Stuff"
+Trigger42Category=1
+Trigger42Actions=9
+Trigger42Action01=CustomScriptCode,endfunction
+Trigger42Action02=CustomScriptCode,"function PlaceRandomUnitLoc takes unitpool up, player p, location l, real f returns nothing"
+Trigger42Action03=CustomScriptCode,"set bj_lastCreatedUnit = PlaceRandomUnit(up, p, GetLocationX(l), GetLocationY(l), f)"
+Trigger42Action04=CustomScriptCode,endfunction
+Trigger42Action05=CustomScriptCode,"function PlaceRandomItemLoc takes itempool ip, location l returns nothing"
+Trigger42Action06=CustomScriptCode,"set bj_lastCreatedItem = PlaceRandomItem(ip, GetLocationX(l), GetLocationY(l))"
+Trigger42Action07=CustomScriptCode,endfunction
+Trigger42Action08=CustomScriptCode,"function WantDestroyGroup takes nothing returns nothing"
+Trigger42Action09=CustomScriptCode,"set bj_wantDestroyGroup = true"
