@@ -6901,8 +6901,8 @@ UnitDamageTargetBJ=1,unit,unit,real,attacktype,damagetype
 _UnitDamageTargetBJ_Defaults=GetTriggerUnit,GetTriggerUnit,500,AttackTypeNormal,DamageTypeNormal
 _UnitDamageTargetBJ_Category=TC_UNIT
 
-UnitDamageTarget=1,unit,unit,boolean,boolean,real,attacktype,damagetype,weapontype
-_UnitDamageTarget_Defaults=GetTriggerUnit,GetSpellTargetUnit,true,true,500,AttackTypeNormal,DamageTypeNormal,WeaponTypeAxeMediumChop
+UnitDamageTarget=1,unit,unit,real,boolean,boolean,attacktype,damagetype,weapontype
+_UnitDamageTarget_Defaults=GetTriggerUnit,GetSpellTargetUnit,500,true,true,AttackTypeNormal,DamageTypeNormal,WeaponTypeAxeMediumChop
 _UnitDamageTarget_Category=TC_UNIT
 
 DecUnitAbilityLevelSwapped=1,abilcode,unit
