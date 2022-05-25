@@ -2781,7 +2781,7 @@ UnitDamageTargetBJ="Cause ",~Unit," to damage ",~Target,", dealing ",~Amount," d
 UnitDamageTargetBJHint="This does not interrupt the unit's orders.  The source unit gets credit for kills resulting from this damage."
 
 UnitDamageTarget="Damage Target "
-UnitDamageTarget="Cause ",~Unit," to damage ",~Target," IsAttack: ",~isAattack," IsRanged: ",~Ranged," dealing ",~Amount," damage of attack type ",~AttackType,", damage type ",~DamageType," and Weapon type: ",~Weapon-Type
+UnitDamageTarget="Cause ",~Unit," to damage ",~Target," by ",~Amount," IsAttack: ",~isAattack," IsRanged: ",~Ranged," damage of attack type ",~AttackType,", damage type ",~DamageType," and Weapon type: ",~Weapon-Type
 UnitDamageTargetHint="This does not interrupt the unit's orders.  The source unit gets credit for kills resulting from this damage."
 
 DecUnitAbilityLevelSwapped="Decrease Level Of Ability For Unit"
